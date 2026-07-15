@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071017" />
+  <meta name="description" content="AIONOS Multimodal Mission Control for Team Global Express" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>AIONOS × TGE | Multimodal Mission Control</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div>
+          <strong>AIONOS</strong>
+          <small>× Team Global Express</small>
+        </div>
+      </div>
+
+      <nav class="nav" id="primary-nav">
+        <a class="nav-item active" href="#overview" data-page="overview"><span class="nav-icon">⌂</span><span>Network cockpit</span></a>
+        <a class="nav-item" href="#exceptions" data-page="exceptions"><span class="nav-icon">◎</span><span>Predictive ETA</span><b id="exception-badge">0</b></a>
+        <a class="nav-item" href="#demand" data-page="demand"><span class="nav-icon">↗</span><span>Demand & capacity</span></a>
+        <a class="nav-item" href="#dispatch" data-page="dispatch"><span class="nav-icon">⌁</span><span>Dynamic dispatch</span></a>
+        <a class="nav-item" href="#revenue" data-page="revenue"><span class="nav-icon">$</span><span>Revenue assurance</span><b id="revenue-badge">0</b></a>
+        <a class="nav-item" href="#depot" data-page="depot"><span class="nav-icon">▦</span><span>Depot flow</span></a>
+        <a class="nav-item" href="#fleet" data-page="fleet"><span class="nav-icon">⚡</span><span>EV & carbon</span></a>
+        <a class="nav-item" href="#scenarios" data-page="scenarios"><span class="nav-icon">◇</span><span>Scenario lab</span></a>
+        <a class="nav-item" href="#trust" data-page="trust"><span class="nav-icon">✓</span><span>Trust centre</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="pilot-card">
+          <span class="eyebrow">90-day pilot</span>
+          <strong>East-coast lane cluster</strong>
+          <div class="pilot-progress"><i style="width:68%"></i></div>
+          <small>Day 61 of 90 · Human-in-loop</small>
+        </div>
+        <div class="data-note"><span></span>Illustrative synthetic data</div>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu" id="mobile-menu" aria-label="Toggle menu">☰</button>
+          <div>
+            <span class="eyebrow" id="page-eyebrow">AI MULTIMODAL MISSION CONTROL</span>
+            <h1 id="page-title">Network cockpit</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="live-status"><i></i><span>Network live</span><small id="live-clock">--:--:--</small></div>
+          <button class="btn btn-secondary" id="simulation-toggle"><span>▶</span> Start live simulation</button>
+          <button class="btn btn-primary" id="optimize-network"><span>✦</span> Run network optimisation</button>
+        </div>
+      </header>
+
+      <div class="notification-stack" id="notification-stack" aria-live="polite"></div>
+
+      <section class="page active" id="page-overview" data-title="Network cockpit" data-eyebrow="AI MULTIMODAL MISSION CONTROL">
+        <div class="hero-grid">
+          <article class="hero-card">
+            <div class="hero-copy">
+              <span class="eyebrow">One control loop</span>
+              <h2>From reactive freight handling to predictive, margin-aware execution.</h2>
+              <p>Sense every network signal, predict risk, recommend the highest-value action and learn from the result.</p>
+              <div class="hero-buttons">
+                <button class="btn btn-primary" data-jump="exceptions">Open exception queue</button>
+                <button class="btn btn-ghost" data-jump="scenarios">Test a disruption</button>
+              </div>
+            </div>
+            <div class="control-loop" aria-label="AIONOS decision loop">
+              <div class="loop-ring"></div>
+              <button class="loop-node n1" data-loop="sense"><b>01</b><span>Sense</span><small>Network state</small></button>
+              <button class="loop-node n2" data-loop="predict"><b>02</b><span>Predict</span><small>Risk + demand</small></button>
+              <button class="loop-node n3" data-loop="decide"><b>03</b><span>Decide</span><small>Best action</small></button>
+              <button class="loop-node n4" data-loop="learn"><b>04</b><span>Learn</span><small>Outcome feedback</small></button>
+              <div class="loop-core"><span>AIONOS</span><strong>AI NATIVE<br>OPERATING LOOP</strong></div>
+            </div>
+          </article>
+
+          <article class="decision-card" id="top-decision-card">
+            <div class="card-head">
+              <div><span class="eyebrow">Highest-value decision now</span><h3 id="top-decision-title">Loading network decision…</h3></div>
+              <span class="priority-tag high">HIGH PRIORITY</span>
+            </div>
+            <p id="top-decision-copy">Evaluating service, cost, margin and carbon trade-offs.</p>
+            <div class="decision-impact" id="top-decision-impact"></div>
+            <button class="btn btn-primary btn-block" id="execute-top-decision">Execute recommended action</button>
+            <small class="human-note">Human approval required · Full audit trail retained</small>
+          </article>
+        </div>
+
+        <div class="kpi-grid" id="executive-kpis"></div>
+
+        <div class="overview-grid">
+          <article class="panel network-panel">
+            <div class="panel-head">
+              <div><span class="eyebrow">LIVE NETWORK</span><h3>Multimodal operating state</h3></div>
+              <div class="legend"><span><i class="healthy"></i>Healthy</span><span><i class="watch"></i>Watch</span><span><i class="critical"></i>Critical</span></div>
+            </div>
+            <div class="network-map">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ocean" x1="0" x2="1"><stop offset="0" stop-color="#0b1821"/><stop offset="1" stop-color="#102632"/></linearGradient>
+                  <filter id="glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                <rect width="100" height="100" rx="4" fill="url(#ocean)"/>
+                <path class="continent" d="M17 69 L20 58 L29 54 L34 43 L43 40 L46 23 L55 19 L61 28 L73 31 L78 41 L89 48 L84 61 L80 69 L75 81 L64 86 L53 80 L43 76 L30 75 Z"/>
+                <path class="tasmania" d="M68 90 L74 89 L77 95 L71 98 Z"/>
+                <path class="nz" d="M93 72 L96 76 L94 82 L97 87 L94 92 L91 88 L92 82 L89 78 Z"/>
+                <g id="network-links"></g>
+                <g id="network-nodes"></g>
+              </svg>
+              <div class="map-overlay">
+                <span>650+ depots & branches</span>
+                <span>Road · Rail · Air · Sea</span>
+              </div>
+              <div class="map-tooltip" id="map-tooltip"></div>
+            </div>
+            <div class="mode-strip" id="mode-strip"></div>
+          </article>
+
+          <article class="panel feed-panel">
+            <div class="panel-head">
+              <div><span class="eyebrow">AGENT ACTIVITY</span><h3>Decisions moving through the network</h3></div>
+              <button class="icon-btn" id="clear-feed" title="Clear feed">×</button>
+            </div>
+            <div class="activity-feed" id="activity-feed"></div>
+          </article>
+        </div>
+
+        <div class="value-grid">
+          <article class="panel value-panel">
+            <div class="panel-head"><div><span class="eyebrow">VALUE REALISATION</span><h3>90-day outcome trajectory</h3></div><span class="status-chip">On track</span></div>
+            <div class="trajectory-chart" id="trajectory-chart"></div>
+          </article>
+          <article class="panel outcome-panel">
+            <div class="panel-head"><div><span class="eyebrow">BUSINESS OUTCOMES</span><h3>One action, four consequences</h3></div></div>
+            <div class="outcome-quadrants" id="outcome-quadrants"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="page-exceptions" data-title="Predictive ETA" data-eyebrow="SERVICE RELIABILITY">
+        <div class="section-intro">
+          <div><span class="eyebrow">INTERVENE BEFORE SERVICE BREAKS</span><h2>Every high-risk shipment becomes an action queue.</h2><p>Risk is recalculated at each handoff using lane, depot, fleet, weather and customer signals.</p></div>
+          <div class="intro-metric"><span>Late-risk reduction</span><strong id="exception-reduction">25%</strong><small>Illustrative pilot target</small></div>
+        </div>
+        <div class="workbench">
+          <article class="panel queue-panel">
+            <div class="panel-head">
+              <div><span class="eyebrow">PRIORITISED QUEUE</span><h3>Shipment exceptions</h3></div>
+              <div class="filter-group" id="exception-filters">
+                <button class="filter active" data-risk="all">All</button>
+                <button class="filter" data-risk="critical">Critical</button>
+                <button class="filter" data-risk="watch">Watch</button>
+              </div>
+            </div>
+            <div class="search-row"><input id="shipment-search" type="search" placeholder="Search shipment, customer or lane…" /><span id="shipment-count"></span></div>
+            <div class="shipment-list" id="shipment-list"></div>
+          </article>
+
+          <article class="panel detail-panel" id="shipment-detail">
+            <div class="empty-state"><span>◎</span><h3>Select a shipment</h3><p>See its journey risk, commercial impact and recommended intervention.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="page-demand" data-title="Demand & capacity" data-eyebrow="PREDICTIVE PLANNING">
+        <div class="section-intro">
+          <div><span class="eyebrow">FORECAST BEFORE VOLUME HITS THE DEPOT</span><h2>Translate customer and lane signals into capacity actions.</h2><p>Seven-day forecasts continuously rebalance labour, linehaul, rail and air contingency.</p></div>
+          <button class="btn btn-primary" id="commit-capacity">Commit recommended capacity</button>
+        </div>
+        <div class="demand-grid">
+          <article class="panel lane-selector-panel">
+            <div class="panel-head"><div><span class="eyebrow">LANE PORTFOLIO</span><h3>Forecast risk by lane</h3></div></div>
+            <div id="lane-list" class="lane-list"></div>
+          </article>
+          <article class="panel demand-chart-panel">
+            <div class="panel-head">
+              <div><span class="eyebrow">VOLUME FORECAST</span><h3 id="demand-lane-title">Lane forecast</h3></div>
+              <span class="confidence-chip" id="forecast-confidence">--</span>
+            </div>
+            <div id="demand-chart" class="large-chart"></div>
+            <div class="forecast-summary" id="forecast-summary"></div>
+          </article>
+        </div>
+        <div class="action-cards" id="capacity-actions"></div>
+      </section>
+
+      <section class="page" id="page-dispatch" data-title="Dynamic dispatch" data-eyebrow="COST & SERVICE OPTIMISATION">
+        <div class="section-intro">
+          <div><span class="eyebrow">REDUCE KILOMETRES WITHOUT REDUCING SERVICE</span><h2>Routes adapt around density, SLA, driver and first-attempt probability.</h2><p>Compare the static plan with the AI-balanced plan, then release it to drivers.</p></div>
+          <button class="btn btn-primary" id="optimize-routes">Optimise all routes</button>
+        </div>
+        <div class="dispatch-summary" id="dispatch-summary"></div>
+        <article class="panel route-visual-panel">
+          <div class="panel-head">
+            <div><span class="eyebrow">ROUTE BALANCING</span><h3>Before vs AI-optimised dispatch</h3></div>
+            <div class="view-toggle"><button class="active" data-route-view="before">Before</button><button data-route-view="after">After</button></div>
+          </div>
+          <div id="route-visual" class="route-visual"></div>
+        </article>
+        <div class="route-card-grid" id="route-card-grid"></div>
+      </section>
+
+      <section class="page" id="page-revenue" data-title="Revenue assurance" data-eyebrow="MARGIN RECOVERY">
+        <div class="section-intro">
+          <div><span class="eyebrow">FIND LEAKAGE SHIPMENT BY SHIPMENT</span><h2>Pricing, billing and cost-to-serve become one closed loop.</h2><p>AI compares contract terms, shipment scans, rate cards and credits before revenue disappears.</p></div>
+          <button class="btn btn-primary" id="recover-all">Approve high-confidence recovery</button>
+        </div>
+        <div class="revenue-kpis" id="revenue-kpis"></div>
+        <article class="panel">
+          <div class="panel-head">
+            <div><span class="eyebrow">RECOVERY QUEUE</span><h3>Detected margin leakage</h3></div>
+            <div class="filter-group" id="revenue-filters">
+              <button class="filter active" data-revenue="open">Open</button>
+              <button class="filter" data-revenue="recovered">Recovered</button>
+              <button class="filter" data-revenue="all">All</button>
+            </div>
+          </div>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Case</th><th>Shipment / customer</th><th>Leakage pattern</th><th>Confidence</th><th>Recoverable</th><th>Action</th></tr></thead>
+              <tbody id="revenue-table"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="page" id="page-depot" data-title="Depot flow" data-eyebrow="NODE PRODUCTIVITY">
+        <div class="section-intro">
+          <div><span class="eyebrow">SEE BOTTLENECKS BEFORE THEY FORM</span><h2>Arrival, dwell, sortation and labour signals become one flow model.</h2><p>Use the digital depot view to rebalance work before throughput is lost.</p></div>
+          <button class="btn btn-primary" id="rebalance-depot">Rebalance depot now</button>
+        </div>
+        <div class="depot-grid">
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">BNE DEPOT DIGITAL FLOW</span><h3>Live load by operating zone</h3></div><span class="priority-tag high" id="depot-risk-tag">Congestion forming</span></div>
+            <div class="depot-diagram" id="depot-diagram"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">PREDICTED FLOW</span><h3>Arrival waves vs throughput</h3></div></div>
+            <div id="depot-flow-chart" class="medium-chart"></div>
+            <div id="depot-decision" class="recommendation-box"></div>
+          </article>
+        </div>
+        <div class="zone-grid" id="zone-grid"></div>
+      </section>
+
+      <section class="page" id="page-fleet" data-title="EV & carbon" data-eyebrow="SUSTAINABLE EXECUTION">
+        <div class="section-intro">
+          <div><span class="eyebrow">MAKE SUSTAINABILITY OPERATIONAL</span><h2>Optimise route fit, charging, battery health and depot energy together.</h2><p>Every dispatch decision exposes its service, cost and carbon trade-off.</p></div>
+          <button class="btn btn-primary" id="optimize-charging">Optimise charge plan</button>
+        </div>
+        <div class="fleet-summary" id="fleet-summary"></div>
+        <div class="fleet-grid">
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">EV CONTROL BOARD</span><h3>Vehicle readiness and route fit</h3></div></div>
+            <div class="vehicle-list" id="vehicle-list"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">ENERGY PLAN</span><h3>Charging by tariff window</h3></div></div>
+            <div id="charging-chart" class="charging-chart"></div>
+            <div class="carbon-card" id="carbon-card"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="page-scenarios" data-title="Scenario lab" data-eyebrow="DECISION STRESS TEST">
+        <div class="section-intro">
+          <div><span class="eyebrow">MAKE AI VISIBLE ON ONE LIVE JOURNEY</span><h2>Inject a disruption. Watch the network react. Approve the recovery plan.</h2><p>Scenario impacts roll through service, cost, depot, margin and carbon KPIs in real time.</p></div>
+          <button class="btn btn-secondary" id="reset-scenario">Reset scenario</button>
+        </div>
+        <div class="scenario-grid" id="scenario-grid"></div>
+        <article class="panel scenario-stage" id="scenario-stage">
+          <div class="scenario-placeholder"><span>◇</span><h3>Select a scenario to begin</h3><p>The control tower will calculate network exposure and an optimised response.</p></div>
+        </article>
+      </section>
+
+      <section class="page" id="page-trust" data-title="Trust centre" data-eyebrow="RESPONSIBLE AI & CONTROL">
+        <div class="section-intro">
+          <div><span class="eyebrow">HUMANS SUPERVISE · AGENTS RECOMMEND · SYSTEMS EXECUTE</span><h2>Operational AI with controls executives can trust.</h2><p>Every recommendation exposes its evidence, confidence, approval status and business outcome.</p></div>
+          <span class="status-chip large">All controls operational</span>
+        </div>
+        <div class="guardrail-grid">
+          <article class="guardrail-card"><span>◉</span><div><small>DATA PRIVACY</small><h3>Customer + shipment data</h3><p>Role-based access, masking and purpose controls applied.</p></div><b>100%</b></article>
+          <article class="guardrail-card"><span>⌾</span><div><small>CYBER RESILIENCE</small><h3>Identity + endpoint risk</h3><p>Continuous policy checks across every agent action.</p></div><b>99.98%</b></article>
+          <article class="guardrail-card"><span>⚖</span><div><small>CHAIN OF RESPONSIBILITY</small><h3>Safety + regulation</h3><p>Unsafe recommendations are blocked before approval.</p></div><b>0 breaches</b></article>
+          <article class="guardrail-card"><span>✓</span><div><small>MODEL ASSURANCE</small><h3>Audit + human override</h3><p>Evidence and outcome retained for every decision.</p></div><b>100%</b></article>
+        </div>
+        <div class="trust-grid">
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">AGENT PERFORMANCE</span><h3>Observed accuracy before automation</h3></div></div>
+            <div class="agent-performance" id="agent-performance"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">DECISION AUDIT</span><h3>Recent approved actions</h3></div></div>
+            <div class="audit-list" id="audit-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>AIONOS × Team Global Express</span>
+        <span>AI Native operating system at scale</span>
+        <span>Illustrative prototype · Synthetic data</span>
+      </footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
