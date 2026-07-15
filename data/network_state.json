@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "application": "AIONOS Multimodal Mission Control",
+    "client": "Team Global Express",
+    "dataMode": "Illustrative synthetic data",
+    "lastUpdated": "2026-07-15T10:00:00+08:00"
+  },
+  "network": {
+    "itemsPerYear": 100000000,
+    "depotsAndBranches": 650,
+    "fleet": 7000,
+    "flightsPerWeek": 500,
+    "modes": [
+      "Road",
+      "Rail",
+      "Air",
+      "Sea"
+    ],
+    "depots": [
+      {
+        "id": "SYD",
+        "name": "Sydney Gateway",
+        "x": 79,
+        "y": 64,
+        "load": 78,
+        "status": "watch",
+        "throughput": 18420,
+        "dwell": 42
+      },
+      {
+        "id": "MEL",
+        "name": "Melbourne South",
+        "x": 68,
+        "y": 81,
+        "load": 64,
+        "status": "healthy",
+        "throughput": 17210,
+        "dwell": 29
+      },
+      {
+        "id": "BNE",
+        "name": "Brisbane North",
+        "x": 84,
+        "y": 43,
+        "load": 88,
+        "status": "critical",
+        "throughput": 12460,
+        "dwell": 57
+      },
+      {
+        "id": "ADL",
+        "name": "Adelaide",
+        "x": 52,
+        "y": 72,
+        "load": 58,
+        "status": "healthy",
+        "throughput": 6420,
+        "dwell": 26
+      },
+      {
+        "id": "PER",
+        "name": "Perth",
+        "x": 18,
+        "y": 68,
+        "load": 72,
+        "status": "watch",
+        "throughput": 7980,
+        "dwell": 38
+      },
+      {
+        "id": "DRW",
+        "name": "Darwin",
+        "x": 45,
+        "y": 20,
+        "load": 47,
+        "status": "healthy",
+        "throughput": 2780,
+        "dwell": 21
+      },
+      {
+        "id": "HBA",
+        "name": "Hobart",
+        "x": 72,
+        "y": 94,
+        "load": 53,
+        "status": "healthy",
+        "throughput": 2310,
+        "dwell": 24
+      },
+      {
+        "id": "AKL",
+        "name": "Auckland Gateway",
+        "x": 96,
+        "y": 82,
+        "load": 69,
+        "status": "healthy",
+        "throughput": 5660,
+        "dwell": 31
+      }
+    ],
+    "modeMix": [
+      {
+        "mode": "Road",
+        "share": 63,
+        "costIndex": 92,
+        "carbonIndex": 104,
+        "service": 94
+      },
+      {
+        "mode": "Rail",
+        "share": 18,
+        "costIndex": 78,
+        "carbonIndex": 61,
+        "service": 91
+      },
+      {
+        "mode": "Air",
+        "share": 12,
+        "costIndex": 168,
+        "carbonIndex": 244,
+        "service": 98
+      },
+      {
+        "mode": "Sea",
+        "share": 7,
+        "costIndex": 71,
+        "carbonIndex": 54,
+        "service": 87
+      }
+    ]
+  },
+  "kpis": {
+    "onTimePerformance": {
+      "label": "On-time performance",
+      "baseline": 89.4,
+      "current": 94.8,
+      "unit": "%",
+      "direction": "up"
+    },
+    "lateExceptionRate": {
+      "label": "Late exception rate",
+      "baseline": 12.8,
+      "current": 9.6,
+      "unit": "%",
+      "direction": "down"
+    },
+    "emptyKilometres": {
+      "label": "Empty kilometres",
+      "baseline": 100,
+      "current": 92,
+      "unit": "index",
+      "direction": "down"
+    },
+    "costToServe": {
+      "label": "Cost-to-serve",
+      "baseline": 100,
+      "current": 86,
+      "unit": "index",
+      "direction": "down"
+    },
+    "depotProductivity": {
+      "label": "Depot productivity",
+      "baseline": 100,
+      "current": 108,
+      "unit": "index",
+      "direction": "up"
+    },
+    "carbonPerShipment": {
+      "label": "Carbon / shipment",
+      "baseline": 100,
+      "current": 94,
+      "unit": "index",
+      "direction": "down"
+    },
+    "revenueRecovered": {
+      "label": "Revenue recovered",
+      "baseline": 0,
+      "current": 468000,
+      "unit": "AUD",
+      "direction": "up"
+    },
+    "customerContacts": {
+      "label": "Avoided customer contacts",
+      "baseline": 0,
+      "current": 1840,
+      "unit": "count",
+      "direction": "up"
+    }
+  }
+}

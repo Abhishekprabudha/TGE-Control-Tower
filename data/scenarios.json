@@ -1,0 +1,74 @@
+[
+  {
+    "id": "peak",
+    "name": "eCommerce peak wave",
+    "icon": "\u2197",
+    "description": "Volumes rise 22% across SYD\u2013MEL and BNE\u2013SYD over the next six hours.",
+    "impacts": {
+      "lateExceptionRate": 2.8,
+      "costToServe": 4.5,
+      "depotProductivity": -3.2,
+      "carbonPerShipment": 1.4
+    },
+    "actions": [
+      "Reserve 4 extra linehaul slots",
+      "Pull 28 flex labour hours",
+      "Nudge economy customers to alternate slots",
+      "Pre-position 2 trailers at BNE"
+    ]
+  },
+  {
+    "id": "disruption",
+    "name": "Rail linehaul disruption",
+    "icon": "\u26a0",
+    "description": "A rail service interruption removes 18% of east-coast capacity.",
+    "impacts": {
+      "lateExceptionRate": 5.6,
+      "costToServe": 6.8,
+      "depotProductivity": -1.8,
+      "carbonPerShipment": 4.1
+    },
+    "actions": [
+      "Protect priority freight on air",
+      "Convert 3 rail blocks to road",
+      "Re-sequence low-margin economy freight",
+      "Notify 126 affected receivers"
+    ]
+  },
+  {
+    "id": "weather",
+    "name": "Severe weather cell",
+    "icon": "\u2602",
+    "description": "Heavy weather affects Brisbane and increases handoff uncertainty.",
+    "impacts": {
+      "lateExceptionRate": 4.3,
+      "costToServe": 3.1,
+      "depotProductivity": -4.4,
+      "carbonPerShipment": 2.7
+    },
+    "actions": [
+      "Reroute via alternate metro gateway",
+      "Add 45-minute ETA buffer",
+      "Hold non-priority dispatch until safe",
+      "Push proactive receiver notifications"
+    ]
+  },
+  {
+    "id": "congestion",
+    "name": "Depot congestion",
+    "icon": "\u25a6",
+    "description": "BNE outbound staging reaches 94% load with rising yard dwell.",
+    "impacts": {
+      "lateExceptionRate": 3.2,
+      "costToServe": 2.2,
+      "depotProductivity": -6.1,
+      "carbonPerShipment": 1.2
+    },
+    "actions": [
+      "Advance BNE\u2013SYD linehaul",
+      "Open overflow staging zone",
+      "Reallocate 8 labour tasks",
+      "Sequence trailers by SLA risk"
+    ]
+  }
+]

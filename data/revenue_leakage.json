@@ -1,0 +1,200 @@
+[
+  {
+    "caseId": "RA-6000",
+    "shipmentId": "TGE-240705",
+    "customer": "Apex Industrial",
+    "type": "Fuel levy mismatch",
+    "severity": "High",
+    "amount": 18152,
+    "confidence": 83,
+    "status": "open",
+    "evidence": "Declared dimensions differ from depot scan"
+  },
+  {
+    "caseId": "RA-6001",
+    "shipmentId": "TGE-240723",
+    "customer": "Nova Health",
+    "type": "Duplicate discount",
+    "severity": "Medium",
+    "amount": 10222,
+    "confidence": 97,
+    "status": "open",
+    "evidence": "Declared dimensions differ from depot scan"
+  },
+  {
+    "caseId": "RA-6002",
+    "shipmentId": "TGE-240710",
+    "customer": "Velocity Commerce",
+    "type": "Reweigh / dimensions",
+    "severity": "High",
+    "amount": 19460,
+    "confidence": 97,
+    "status": "open",
+    "evidence": "Credit exceeds approved recovery threshold"
+  },
+  {
+    "caseId": "RA-6003",
+    "shipmentId": "TGE-240732",
+    "customer": "Apex Industrial",
+    "type": "Incorrect rate card",
+    "severity": "High",
+    "amount": 6691,
+    "confidence": 97,
+    "status": "open",
+    "evidence": "Declared dimensions differ from depot scan"
+  },
+  {
+    "caseId": "RA-6004",
+    "shipmentId": "TGE-240716",
+    "customer": "BuildPro",
+    "type": "Reweigh / dimensions",
+    "severity": "High",
+    "amount": 13780,
+    "confidence": 83,
+    "status": "open",
+    "evidence": "Contract surcharge condition met but absent"
+  },
+  {
+    "caseId": "RA-6005",
+    "shipmentId": "TGE-240719",
+    "customer": "Apex Industrial",
+    "type": "Missing surcharge",
+    "severity": "Medium",
+    "amount": 27229,
+    "confidence": 84,
+    "status": "open",
+    "evidence": "Contract surcharge condition met but absent"
+  },
+  {
+    "caseId": "RA-6006",
+    "shipmentId": "TGE-240725",
+    "customer": "Southern Components",
+    "type": "Reweigh / dimensions",
+    "severity": "High",
+    "amount": 18936,
+    "confidence": 89,
+    "status": "open",
+    "evidence": "Invoice line duplicated across consignments"
+  },
+  {
+    "caseId": "RA-6007",
+    "shipmentId": "TGE-240730",
+    "customer": "Velocity Commerce",
+    "type": "Service recovery credit",
+    "severity": "Medium",
+    "amount": 15412,
+    "confidence": 91,
+    "status": "open",
+    "evidence": "Invoice line duplicated across consignments"
+  },
+  {
+    "caseId": "RA-6008",
+    "shipmentId": "TGE-240719",
+    "customer": "Aurora Retail",
+    "type": "Service recovery credit",
+    "severity": "Medium",
+    "amount": 10656,
+    "confidence": 85,
+    "status": "open",
+    "evidence": "Contract surcharge condition met but absent"
+  },
+  {
+    "caseId": "RA-6009",
+    "shipmentId": "TGE-240709",
+    "customer": "BuildPro",
+    "type": "Fuel levy mismatch",
+    "severity": "High",
+    "amount": 7564,
+    "confidence": 87,
+    "status": "open",
+    "evidence": "Contract surcharge condition met but absent"
+  },
+  {
+    "caseId": "RA-6010",
+    "shipmentId": "TGE-240703",
+    "customer": "Nova Health",
+    "type": "Missing surcharge",
+    "severity": "Medium",
+    "amount": 18737,
+    "confidence": 82,
+    "status": "open",
+    "evidence": "Credit exceeds approved recovery threshold"
+  },
+  {
+    "caseId": "RA-6011",
+    "shipmentId": "TGE-240720",
+    "customer": "Velocity Commerce",
+    "type": "Service recovery credit",
+    "severity": "Medium",
+    "amount": 23239,
+    "confidence": 91,
+    "status": "open",
+    "evidence": "Declared dimensions differ from depot scan"
+  },
+  {
+    "caseId": "RA-6012",
+    "shipmentId": "TGE-240723",
+    "customer": "Apex Industrial",
+    "type": "Missing surcharge",
+    "severity": "Medium",
+    "amount": 10090,
+    "confidence": 96,
+    "status": "open",
+    "evidence": "Declared dimensions differ from depot scan"
+  },
+  {
+    "caseId": "RA-6013",
+    "shipmentId": "TGE-240730",
+    "customer": "Apex Industrial",
+    "type": "Fuel levy mismatch",
+    "severity": "High",
+    "amount": 8298,
+    "confidence": 88,
+    "status": "open",
+    "evidence": "Credit exceeds approved recovery threshold"
+  },
+  {
+    "caseId": "RA-6014",
+    "shipmentId": "TGE-240708",
+    "customer": "Nova Health",
+    "type": "Reweigh / dimensions",
+    "severity": "High",
+    "amount": 18494,
+    "confidence": 90,
+    "status": "open",
+    "evidence": "Contract surcharge condition met but absent"
+  },
+  {
+    "caseId": "RA-6015",
+    "shipmentId": "TGE-240706",
+    "customer": "Apex Industrial",
+    "type": "Reweigh / dimensions",
+    "severity": "High",
+    "amount": 2604,
+    "confidence": 91,
+    "status": "open",
+    "evidence": "Credit exceeds approved recovery threshold"
+  },
+  {
+    "caseId": "RA-6016",
+    "shipmentId": "TGE-240723",
+    "customer": "Apex Industrial",
+    "type": "Reweigh / dimensions",
+    "severity": "High",
+    "amount": 16008,
+    "confidence": 94,
+    "status": "open",
+    "evidence": "Lane rate does not match active schedule"
+  },
+  {
+    "caseId": "RA-6017",
+    "shipmentId": "TGE-240716",
+    "customer": "Velocity Commerce",
+    "type": "Duplicate discount",
+    "severity": "Medium",
+    "amount": 18344,
+    "confidence": 84,
+    "status": "open",
+    "evidence": "Invoice line duplicated across consignments"
+  }
+]

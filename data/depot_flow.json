@@ -1,0 +1,72 @@
+{
+  "zones": [
+    {
+      "zone": "Inbound docks",
+      "load": 87,
+      "queue": 18,
+      "dwell": 54,
+      "labour": 34,
+      "recommendation": "Open dock 7 and pull 6 flex workers"
+    },
+    {
+      "zone": "Primary sort",
+      "load": 74,
+      "queue": 11,
+      "dwell": 31,
+      "labour": 48,
+      "recommendation": "Shift 2 sort lanes to BNE-SYD priority"
+    },
+    {
+      "zone": "Oversize",
+      "load": 63,
+      "queue": 8,
+      "dwell": 42,
+      "labour": 12,
+      "recommendation": "Pre-stage forklift and clear bay 3"
+    },
+    {
+      "zone": "Outbound staging",
+      "load": 91,
+      "queue": 23,
+      "dwell": 61,
+      "labour": 29,
+      "recommendation": "Advance linehaul MEL-17 by 35 min"
+    },
+    {
+      "zone": "Yard",
+      "load": 69,
+      "queue": 14,
+      "dwell": 46,
+      "labour": 16,
+      "recommendation": "Sequence trailers by departure risk"
+    }
+  ],
+  "arrivalWaves": [
+    31,
+    44,
+    59,
+    72,
+    88,
+    96,
+    83,
+    71,
+    62,
+    55,
+    48,
+    39
+  ],
+  "throughput": [
+    38,
+    42,
+    46,
+    51,
+    57,
+    63,
+    68,
+    72,
+    76,
+    81,
+    86,
+    90
+  ]
+}

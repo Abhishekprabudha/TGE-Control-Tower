@@ -1,0 +1,72 @@
+[
+  {
+    "routeId": "SYD-R14",
+    "depot": "SYD",
+    "driver": "L. Chen",
+    "stopsBefore": 84,
+    "stopsAfter": 93,
+    "kmBefore": 301,
+    "kmAfter": 282,
+    "emptyKmBefore": 57,
+    "emptyKmAfter": 47,
+    "missedBefore": 11,
+    "missedAfter": 8,
+    "status": "ready"
+  },
+  {
+    "routeId": "MEL-R15",
+    "depot": "MEL",
+    "driver": "J. Wilson",
+    "stopsBefore": 87,
+    "stopsAfter": 98,
+    "kmBefore": 456,
+    "kmAfter": 424,
+    "emptyKmBefore": 72,
+    "emptyKmAfter": 63,
+    "missedBefore": 12,
+    "missedAfter": 10,
+    "status": "ready"
+  },
+  {
+    "routeId": "BNE-R16",
+    "depot": "BNE",
+    "driver": "J. Wilson",
+    "stopsBefore": 73,
+    "stopsAfter": 82,
+    "kmBefore": 303,
+    "kmAfter": 279,
+    "emptyKmBefore": 60,
+    "emptyKmAfter": 52,
+    "missedBefore": 8,
+    "missedAfter": 6,
+    "status": "ready"
+  },
+  {
+    "routeId": "ADL-R17",
+    "depot": "ADL",
+    "driver": "J. Wilson",
+    "stopsBefore": 87,
+    "stopsAfter": 98,
+    "kmBefore": 358,
+    "kmAfter": 342,
+    "emptyKmBefore": 84,
+    "emptyKmAfter": 72,
+    "missedBefore": 10,
+    "missedAfter": 9,
+    "status": "ready"
+  },
+  {
+    "routeId": "PER-R18",
+    "depot": "PER",
+    "driver": "J. Wilson",
+    "stopsBefore": 94,
+    "stopsAfter": 107,
+    "kmBefore": 388,
+    "kmAfter": 360,
+    "emptyKmBefore": 89,
+    "emptyKmAfter": 73,
+    "missedBefore": 10,
+    "missedAfter": 7,
+    "status": "ready"
+  }
+]

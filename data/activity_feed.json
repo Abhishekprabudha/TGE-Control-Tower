@@ -1,0 +1,32 @@
+[
+  {
+    "time": "10:00:04",
+    "type": "ETA",
+    "message": "TGE-240731 risk increased to 72%; earlier metro run identified.",
+    "severity": "high"
+  },
+  {
+    "time": "09:59:42",
+    "type": "Demand",
+    "message": "SYD \u2192 MEL forecast exceeds planned capacity by 9.4%.",
+    "severity": "medium"
+  },
+  {
+    "time": "09:59:11",
+    "type": "Revenue",
+    "message": "RA-6004 found AUD 12,840 missing surcharge with 96% confidence.",
+    "severity": "high"
+  },
+  {
+    "time": "09:58:37",
+    "type": "Depot",
+    "message": "BNE outbound staging predicted to exceed 90% in 42 minutes.",
+    "severity": "medium"
+  },
+  {
+    "time": "09:58:02",
+    "type": "EV",
+    "message": "EV-109 moved to low-tariff charge window; AUD 18 saved.",
+    "severity": "low"
+  }
+]
